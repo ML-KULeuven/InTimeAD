@@ -1,0 +1,41 @@
+[project]
+name = "InTimeAD"
+version = "0.0.1"
+description = "A web application to explore the performance of time series anomaly detection models in a interactive, hands-on manner."
+authors = [
+    {name = "Louis Carpentier", email = "louis.carpentier@kuleuven.be"}
+]
+keywords = ["machine-learning", "time-series", "anomaly-detection", "data-mining", "streamlit"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "dtaianomaly",
+    "streamlit",
+    "plotly",
+    "pre-commit",
+    "black",
+    "isort",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+repository = "https://github.com/ML-KULeuven/InTimeAD"
+changelog = "https://github.com/ML-KULeuven/InTimeAD/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["in_time_ad", "in_time_ad.*"]  # alternatively: `exclude = ["additional*"]`
+namespaces = false
+
+[project.scripts]
+InTimeAD = "in_time_ad:run"
