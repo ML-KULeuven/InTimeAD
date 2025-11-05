@@ -36,6 +36,26 @@ InTimeAD
 ```
 or by executing the following Python script:
 ```python
-import in_time_ad
-in_time_ad.run()
+import InTimeAD
+InTimeAD.run()
+```
+
+## Custom models
+
+To include custom anomaly detectors, data sets and evaluation metrics, you must run ``InTimeAD`` in the local host using the Python script. First, make sure you have implemented the custom anomaly detector, data loader, or evaluation metric according to the dtaianomaly standards. The implementations should be a different file than the Python-script to avoid run-time issues. Then, you can include these custom classes by extending the script as follows:
+```python
+import InTimeAD
+from my_models import MyDetector, MyDataLoader, MyMetric
+InTimeAD.run(
+    custom_anomaly_detectors=MyDetector,  # Use the type and not an instance!
+    custom_data_loaders=MyDataLoader,
+    custom_metrics=MyMetric
+    
+)
+```
+All parameters are optional and by default no custom models are used. It is also possible to provide multiple custom models by passing them as a list:
+```python
+import InTimeAD
+from my_models import MyDetector1, MyDetector2
+InTimeAD.run(custom_anomaly_detectors=[MyDetector1, MyDetector2])
 ```
