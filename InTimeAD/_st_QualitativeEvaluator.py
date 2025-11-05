@@ -1,7 +1,6 @@
 from typing import List
 
 import streamlit as st
-
 from dtaianomaly.anomaly_detection import Supervision
 from dtaianomaly.data import DataSet
 from dtaianomaly.in_time_ad._st_AnomalyDetector import StAnomalyDetector

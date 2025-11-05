@@ -3,9 +3,8 @@ from typing import Dict, List, Optional
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-
 from dtaianomaly.utils import get_dimension, is_univariate, make_intervals
+from plotly.subplots import make_subplots
 
 
 def plot_data(

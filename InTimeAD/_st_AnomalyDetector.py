@@ -2,7 +2,6 @@ import copy
 
 import numpy as np
 import streamlit as st
-
 from dtaianomaly.anomaly_detection import BaseDetector, Supervision
 from dtaianomaly.data import DataSet
 from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer

@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-
 from dtaianomaly.anomaly_detection import Supervision
 from dtaianomaly.data import DataSet
 from dtaianomaly.evaluation import Metric, ProbaMetric, ThresholdMetric

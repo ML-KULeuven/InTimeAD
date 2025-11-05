@@ -1,8 +1,6 @@
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
-from plotly.subplots import make_subplots
-
 from dtaianomaly.anomaly_detection import (
     BaseDetector,
     ClusterBasedLocalOutlierFactor,
@@ -10,6 +8,7 @@ from dtaianomaly.anomaly_detection import (
     KShapeAnomalyDetector,
 )
 from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer
+from plotly.subplots import make_subplots
 
 
 class CentroidVisualizer(CustomDetectorVisualizer):

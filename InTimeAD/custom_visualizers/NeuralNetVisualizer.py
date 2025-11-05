@@ -1,5 +1,4 @@
 import streamlit as st
-
 from dtaianomaly.anomaly_detection import BaseDetector, BaseNeuralDetector
 from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer
 

@@ -3,7 +3,6 @@ import sys
 import warnings
 
 import streamlit as st
-
 from dtaianomaly.in_time_ad._configuration import load_configuration
 from dtaianomaly.in_time_ad._st_AnomalyDetector import StAnomalyDetectorLoader
 from dtaianomaly.in_time_ad._st_DataLoader import StDataLoader

@@ -1,7 +1,6 @@
 import tempfile
 
 import streamlit as st
-
 from dtaianomaly.anomaly_detection import Supervision
 from dtaianomaly.data import CustomDataLoader, DataSet, LazyDataLoader, PathDataLoader
 from dtaianomaly.in_time_ad._utils import show_class_summary
