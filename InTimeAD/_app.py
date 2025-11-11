@@ -313,24 +313,47 @@ st.session_state.st_evaluation_scores.show_scores()
 
 show_header("Acknowledgements")
 st.write(
-    "If you find ``dtaianomaly`` or ``InTimeAD`` useful for your work, we would appreciate the following [citation](https://arxiv.org/abs/2502.14381):"
+    "If you find ``dtaianomaly`` or ``InTimeAD`` useful for your work, we would appreciate the following citations:"
 )
-st.code(
-    """
-    @article{carpentier2025dtaianomaly,
-          title={{dtaianomaly: A Python library for time series anomaly detection}},
-          author={Louis Carpentier and Nick Seeuws and Wannes Meert and Mathias Verbeke},
-          year={2025},
-          eprint={2502.14381},
-          archivePrefix={arXiv},
-          primaryClass={cs.LG},
-          url={https://arxiv.org/abs/2502.14381},
-    }
-    """,
-    language="bibtex",
-)
+
 st.markdown(
-    "> Carpentier, L., Seeuws, N., Meert, W., Verbeke, M.: dtaianomaly: A Python library for time series anomaly detection (2025), https://arxiv.org/abs/2502.14381"
+    'Carpentier, L., Meert, W., Verbeke, M., "InTimeAD: Interactive Time Series '
+    'Anomaly Detection." Proceedings of the AAAI Conference on Artificial Intelligence (2026).'
+)
+with st.expander("bibtex"):
+    st.code(
+        "@article{carpentier2026intimead,\n"
+        "    title={{InTimeAD: Interactive Time Series Anomaly Detection}},\n"
+        "    author={Louis Carpentier and Wannes Meert and Mathias Verbeke},\n"
+        "    year={2026},\n"
+        "    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n"
+        "}",
+        language="bibtex",
+    )
+
+
+st.markdown(
+    'Carpentier, L., Seeuws, N., Meert, W., Verbeke, M., "dtaianomaly: A Python '
+    'library for time series anomaly detection." arXiv preprint arXiv:2502.14381 (2025).'
+)
+with st.expander("bibtex"):
+    st.code(
+        "@article{carpentier2025dtaianomaly,\n"
+        "    title={{dtaianomaly: A Python library for time series anomaly detection}},\n"
+        "    author={Louis Carpentier and Nick Seeuws and Wannes Meert and Mathias Verbeke},\n"
+        "    year={2025},\n"
+        "    eprint={2502.14381},\n"
+        "    archivePrefix={arXiv},\n"
+        "    primaryClass={cs.LG},\n"
+        "    url={https://arxiv.org/abs/2502.14381},\n"
+        "}",
+        language="bibtex",
+    )
+
+st.markdown(
+    "This research is supported by Flanders Innovation \& Entrepreneurship (VLAIO) through the "
+    "AI-ICON project CONSCIOUS (HBC.2020.2795), the Flemish government under the Flanders AI "
+    "Research Program, and by Internal Funds KU Leuven (STG/21/057 \& C3/23/047)."
 )
 
 cols = st.columns(5, vertical_alignment="bottom")
