@@ -7,8 +7,9 @@ from dtaianomaly.anomaly_detection import (
     KMeansAnomalyDetector,
     KShapeAnomalyDetector,
 )
-from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer
 from plotly.subplots import make_subplots
+
+from InTimeAD._CustomDetectorVisualizer import CustomDetectorVisualizer
 
 
 class CentroidVisualizer(CustomDetectorVisualizer):

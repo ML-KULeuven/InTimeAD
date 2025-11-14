@@ -6,9 +6,10 @@ import torch
 from dtaianomaly.anomaly_detection import BaseDetector
 from dtaianomaly.data import LazyDataLoader
 from dtaianomaly.evaluation import Metric
-from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer
 from dtaianomaly.utils import convert_to_list
 from streamlit.web import cli as stcli
+
+from InTimeAD._CustomDetectorVisualizer import CustomDetectorVisualizer
 
 torch.classes.__path__ = []  # To avoid torch-warning
 

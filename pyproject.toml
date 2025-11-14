@@ -10,7 +10,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 dependencies = [
-    "dtaianomaly",
+    "dtaianomaly>=0.5.1",
     "streamlit",
     "plotly",
     "pre-commit",

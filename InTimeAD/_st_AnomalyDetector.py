@@ -4,15 +4,16 @@ import numpy as np
 import streamlit as st
 from dtaianomaly.anomaly_detection import BaseDetector, Supervision
 from dtaianomaly.data import DataSet
-from dtaianomaly.in_time_ad._CustomDetectorVisualizer import CustomDetectorVisualizer
-from dtaianomaly.in_time_ad._utils import (
+from dtaianomaly.type_validation import WindowSizeAttribute
+
+from InTimeAD._CustomDetectorVisualizer import CustomDetectorVisualizer
+from InTimeAD._utils import (
     get_parameters,
     input_widget_hyperparameter,
     show_class_summary,
     show_small_header,
     update_object,
 )
-from dtaianomaly.type_validation import WindowSizeAttribute
 
 
 class StAnomalyDetector:

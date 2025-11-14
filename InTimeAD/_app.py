@@ -3,15 +3,18 @@ import sys
 import warnings
 
 import streamlit as st
-from dtaianomaly.in_time_ad._configuration import load_configuration
-from dtaianomaly.in_time_ad._st_AnomalyDetector import StAnomalyDetectorLoader
-from dtaianomaly.in_time_ad._st_DataLoader import StDataLoader
-from dtaianomaly.in_time_ad._st_QualitativeEvaluator import StQualitativeEvaluator
-from dtaianomaly.in_time_ad._st_QuantitativeEvaluator import (
+from dtaianomaly.utils import all_classes
+
+from InTimeAD import custom_visualizers
+from InTimeAD._configuration import load_configuration
+from InTimeAD._st_AnomalyDetector import StAnomalyDetectorLoader
+from InTimeAD._st_DataLoader import StDataLoader
+from InTimeAD._st_QualitativeEvaluator import StQualitativeEvaluator
+from InTimeAD._st_QuantitativeEvaluator import (
     StEvaluationScores,
     StQualitativeEvaluationLoader,
 )
-from dtaianomaly.in_time_ad._utils import (
+from InTimeAD._utils import (
     error_no_detectors,
     error_no_metrics,
     load_custom_models,
@@ -19,7 +22,6 @@ from dtaianomaly.in_time_ad._utils import (
     show_section_description,
     write_code_lines,
 )
-from dtaianomaly.utils import all_classes
 
 ###################################################################
 # LAYOUT
@@ -66,9 +68,7 @@ if "st_anomaly_detector_loader" not in st.session_state:
             type_filter="anomaly-detector", return_names=True
         )
         + st.session_state.custom_models["anomaly_detectors"],
-        all_custom_detector_visualizers=all_classes(
-            type_filter="custom-demonstrator-visualizers", return_names=True
-        )
+        all_custom_detector_visualizers=custom_visualizers.all_visualizers
         + st.session_state.custom_models["custom_visualizers"],
         configuration=st.session_state.configuration["detector"],
     )
