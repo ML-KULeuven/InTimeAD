@@ -96,13 +96,6 @@ class StDataLoader:
             try:
                 self.data_loader = data_loader_cls(**parameters)
                 self.data_set = self.data_loader.load()
-                if "path" in parameters:
-                    # This is not recommended in practice, but for showing a nice file (without the temporary path)
-                    self.data_loader.path = file_name_path
-                if "test_path" in parameters:
-                    self.data_loader.test_path = file_name_test
-                if "train_path" in parameters:
-                    self.data_loader.train_path = file_name_train
 
             except Exception as e:
                 if "missing 1 required positional argument: 'path'" in str(e):
